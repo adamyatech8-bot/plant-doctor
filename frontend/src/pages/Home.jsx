@@ -25,11 +25,11 @@ function Home() {
     const formData = new FormData();
     formData.append("image", image);
 
-    try {
-      const res = await axios.post(
-        "http://localhost:5000/api/plants/scan",
-        formData
-      );
+try {
+  const res = await axios.post(
+    "https://plant-doctor-k8wa.onrender.com/api/plants/scan",
+    formData
+  );
 
       // 🌟 LocalStorage में स्कैन डेटा को हिस्ट्री के लिए सेव करने का लॉजिक
       const newScanLog = {

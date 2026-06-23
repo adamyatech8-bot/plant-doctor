@@ -116,7 +116,7 @@ const detectPlantDisease = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      imageUrl: `http://localhost:5000/uploads/${req.file.filename}`,
+     imageUrl: `https://plant-doctor-k8wa.onrender.com/uploads/${req.file.filename}`,
       plantName: scan.plantName,
       disease: scan.disease,
       confidence: scan.confidence,

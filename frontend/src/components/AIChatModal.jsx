@@ -26,10 +26,12 @@ function AIChatModal() {
 
     try {
       // 🌟 बाद में इस यूआरएल को अपने बैकएंड एंडपॉइंट से बदलें
-      const res = await axios.post("http://localhost:5000/api/plants/chat", {
-        message: userMessage,
-      });
-
+    const res = await axios.post(
+  "https://plant-doctor-k8wa.onrender.com/api/plants/chat",
+  {
+    message: userMessage,
+  }
+);
       setMessages((prev) => [...prev, { text: res.data.reply, isBot: true }]);
     } catch (error) {
       console.error(error);
